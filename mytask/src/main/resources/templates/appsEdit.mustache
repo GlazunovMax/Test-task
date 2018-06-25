@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Edit of application status
+
+		  <form action="/showAllApps" method="POST">
+			<input type="hidden" name="id" value="{{messageApp.id}}">
+			<input type="text" name="request" value="{{messageApp.request}}" placeholder="App ">
+			
+			
+			{{#statuses}}
+				<div>
+        			<label><input type="radio" name=status value="{{.}}" checked="checked"> {{.}}</label>
+				</div>
+			{{/statuses}}
+			
+			<input type="hidden" name="_csrf" value="{{_csrf.token}}">
+			<button type="submit">Save</button>
+		</form>
+
+
+		
+</body>
+</html>

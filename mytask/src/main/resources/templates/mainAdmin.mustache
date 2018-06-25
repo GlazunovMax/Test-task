@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div> 
+		<form action="/logout" method="post">
+		<input type="hidden" name="_csrf" value="{{_csrf.token}}">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+
+<a href="/">Start page</a><br>
+
+	<div>Hello, admin! </div>
+	
+    <a href="/statistics">Statistics</a><br>
+    
+    <a href="/showAllApps">Show all apps</a>
+    
+    
+</body>
+</html>

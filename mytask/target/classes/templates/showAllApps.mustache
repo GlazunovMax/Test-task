@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>List Apps</div>
+
+<table>
+	<thead>
+	<tr>
+		<th>id</th>
+		<th>request</th>
+		<th>bid</th>
+		<th>date</th>
+		<th>status</th>
+		
+	</tr>
+	</thead>
+
+	<tbody>
+	{{#applications}}
+	<tr>
+		<td><b>{{id}}</b></td>
+		<td><span>{{request}}</span></td>
+		<td><i>{{bid}}</i></td>
+		<td><i>{{date}}</i></td>
+		<td><i>{{status}}</i></td>
+		<td><a href="/showAllApps/{{id}}">edit</a></td>
+	</tr>
+	{{/applications}}
+	</tbody>
+	
+	
+	<a href="/">Start page</a><br>
+	 <a href="/statistics">Statistics</a><br>
+</table>
+</body>
+</html>
